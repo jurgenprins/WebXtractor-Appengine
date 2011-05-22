@@ -1,0 +1,168 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Webshots - Full Size Photo</title>
+	<script type="text/javascript" src="//p.webshots.net/js/swfobject.js"></script>
+	<script type="text/javascript" src="//p.webshots.net/abhome/js/ab-global.js"></script>
+	<style type="text/css">
+	* {margin: 0; padding: 0; border: none;}
+	html {background: #d9d9d9; overflow: hidden;}
+	object, embed {display: block;}
+	.message {
+		padding:5px;
+		background-color:#FCFCFC;
+		color: #000000;
+		font-family:verdana;
+		font-weight:bold;
+		font-size:9pt;
+	}
+	a {text-decoration: none; color: #e22914; font-weight: normal}
+	a:hover {text-decoration: underline; color: #ff1a00;}
+	</style>
+</head>
+
+<body>
+	<p class="message">
+	This photo may only be saved by friends
+	</p>
+	<div id="fullSizeImageLoaderContainer"></div>
+	<script type="text/javascript">
+
+	var so = new SWFObject(
+		'http://p.webshots.com/flash/fullsizeimageloader/FullSizeImageLoader_v1.swf',
+		'fullsizeimageloader',
+		document.documentElement.clientWidth,
+		document.documentElement.clientHeight,
+		'9'
+	);
+	so.addVariable('source', 'http://image62.webshots.com/662/9/51/75/2392951750072051924SZScUV_fs.jpg');
+	so.addParam('allowscriptaccess', 'always');
+	so.write('fullSizeImageLoaderContainer');
+
+	resizeFlash.obj = document.getElementById('fullsizeimageloader');
+
+	var clientWidth = 0;
+	var clientHeight = 0;
+
+	function resizeFlash() {
+		clientWidth = document.documentElement.clientWidth;
+		clientHeight = document.documentElement.clientHeight;
+
+		resizeFlash.obj.style.width = clientWidth + 'px';
+		resizeFlash.obj.style.height = clientHeight + 'px';
+
+		refreshFlash();
+	}
+
+	function refreshFlash() {
+		try {
+			(window.fullsizeimageloader || document.fullsizeimageloader).scaleAndCenter(clientWidth, clientHeight);
+		} catch(e) {
+			setTimeout(function() { refreshFlash(); }, 100);
+		}
+	}
+
+	function loadImage() {
+		try {
+			(window.fullsizeimageloader || document.fullsizeimageloader).load("http://image62.webshots.com/662/9/51/75/2392951750072051924SZScUV_fs.jpg");
+		} catch(e) {
+			setTimeout(function() { loadImage(); }, 100);
+		}
+	}
+
+	window.onresize = function() {
+		clearTimeout(resizeFlash.timer);
+		resizeFlash.timer = setTimeout(resizeFlash, 100);
+	};
+
+	loadImage();
+	</script>
+
+
+<!-- BEGIN OMNITURE TRACKING -->
+<script type="text/javascript" src="//p.webshots.net/js/extras.js"></script>
+<!-- SiteCatalyst code version: G.7.  -New Copyright 1997-2004 Omniture, Inc. More info available at http://www.omniture.com -->
+<script type="text/javascript">
+//<!-- pp 
+var ingroup=omniture.inTrackingSample();
+var s_pageName="/page/fullsize/goodtimes/friendsfun";  // Necessary
+var s_server="";    // suggested
+var s_channel="";   // suggested as an "area" of the site
+var s_pageType="";
+var s_prop1="";     // have up to 20 of these to report on.
+var s_prop2="anon";
+var s_prop4="";
+var s_prop7="A";
+var s_prop8="/page/fullsize/goodtimes/friendsfun|anon";
+
+var s_campaign="";  // external "campaign" that brings viewers here
+var s_events="";
+var s_products="";
+var s_eVar1="";    // have up to 10 of these to report on
+var s_eVar4="anon";
+var s_eVar8="A";
+
+/********** DO NOT ALTER ANYTHING ELSE BELOW THIS LINE! *************/
+var s_code=' '//--></script>
+<script type="text/javascript" src="//p.webshots.net/js/scodews.js"></script>
+<script type="text/javascript"><!--
+if(ingroup) { var s_wd=window,s_tm=new Date;if(s_code!=' '){s_code=s_dc('agwebshots'); if(s_code)document.write(s_code)}else
+document.write('<im'+'g class="tracker-image" width="1" height="1" alt="" src="//agwebshots.112.2O7.net/b/ss/agwebshots/1/G.7--FB/s'+s_tm.getTime()+'?[AQB]'+'&j=1.0&[AQE]">');
+}
+//--></script>
+<script type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<noscript>
+	<div class="tracker-image"><img width="1" height="1" alt="" src="//agwebshots.112.2O7.net/b/ss/agwebshots/1/G.7--NS/0?pageName=%2Fpage%2Ffullsize%2Fgoodtimes%2Ffriendsfun&amp;ch=&amp;server=&amp;c10=ag&amp;c3=W"></div>
+</noscript>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: G.7. -->
+<!-- END OMNITURE TRACKING -->
+
+
+
+
+
+
+
+		
+			
+			
+			
+		
+	
+
+
+
+
+<script src="http://ag.tags.crwdcntrl.net/cc.js" type="text/javascript"></script>
+<script type="text/javascript">
+if (typeof(LOTCC) != "undefined") {
+	LOTCC.client = "173";
+	
+	
+	
+	
+		 
+		LOTCC.add("int", "goodtimes");
+		
+		
+		LOTCC.add("int", "friendsfun");
+		
+	
+	LOTCC.bcp();
+}
+</script>
+
+
+
+</body>
+</html>
